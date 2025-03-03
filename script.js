@@ -150,6 +150,7 @@ const BoardManager = {
   createBoard(title, description, color) {
     const boardElement = createBoardElement(title, description, color);
     this.setupNewBoard(boardElement);
+
     return boardElement;
   },
 
@@ -162,6 +163,10 @@ const BoardManager = {
       SELECTORS.boardEditButton
     );
     // console.log(updateBoardButton);
+    const addButton = boardElement.querySelector(".add-item-button");
+    if (addButton) {
+      addButton.addEventListener("click", handleAddItem);
+    }
     if (updateBoardButton) {
       updateBoardButton.addEventListener("click", handleUpdateBoard);
     }
@@ -248,6 +253,7 @@ function handleAddBoard() {
     document
       .querySelector(".container")
       .insertBefore(boardElement, boardAddButton);
+    updateState();
   } else {
     alert("Please fill in all board details.");
   }
