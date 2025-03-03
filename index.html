@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban Board</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="board">
+        <div class="column">
+          <div class="column-header">
+            <span class="status-indicator">
+              <span class="status-dot"></span>
+            </span>
+            <h3 class="column-title">To Do</h3>
+            <span class="task-count">1</span>
+            <div id="board-actions">
+              <img
+                id="board-edit-button"
+                width="25"
+                height="25"
+                src="https://img.icons8.com/office/40/edit.png"
+                alt="edit" />
+              <div id="board-delete-button">
+                <img
+                  width="40"
+                  height="40"
+                  src="https://img.icons8.com/scribby/50/filled-trash.png"
+                  alt="filled-trash" />
+              </div>
+            </div>
+          </div>
+          <p class="column-description">
+            Got a task? Add it here and get it done!
+          </p>
+          <div class="tasks">
+            <div draggable="true" data-task-id="1741019418185" class="task">
+              <div class="task-header">
+                <span class="task-status"></span>
+                <span class="task-status-text">Draft</span>
+                <span id="taskdate" class="task-date">Mar 3, 2025</span>
+                <div id="task-actions">
+                  <img
+                    width="100"
+                    height="100"
+                    class="edit-task-button"
+                    src="https://img.icons8.com/plasticine/100/edit.png"
+                    alt="edit" />
+                  <img
+                    class="delete-task-button"
+                    width="24"
+                    height="24"
+                    src="https://img.icons8.com/ios/50/cancel.png"
+                    alt="cancel" />
+                </div>
+              </div>
+              <p class="task-title">
+                Project Kanban Board. Nandan you can do it bro🤨
+              </p>
+            </div>
+          </div>
+          <button class="add-item-button">
+            <svg
+              class="add-item-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 4V20M4 12H20"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"></path>
+            </svg>
+            Add Item
+          </button>
+        </div>
+      </div>
+
+      <div class="board">
+        <div class="column">
+          <div class="column-header">
+            <span class="status-indicator">
+              <span class="status-dot"></span>
+            </span>
+            <h3 class="column-title">Doing</h3>
+            <span class="task-count">0</span>
+            <div id="board-actions">
+              <img
+                id="board-edit-button"
+                width="25"
+                height="25"
+                src="https://img.icons8.com/office/40/edit.png"
+                alt="edit" />
+              <div id="board-delete-button">
+                <img
+                  width="40"
+                  height="40"
+                  src="https://img.icons8.com/scribby/50/filled-trash.png"
+                  alt="filled-trash" />
+              </div>
+            </div>
+          </div>
+          <p class="column-description">
+            What are you working on right now? Track it here!
+          </p>
+          <div class="tasks"></div>
+          <button class="add-item-button">
+            <svg
+              class="add-item-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 4V20M4 12H20"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"></path>
+            </svg>
+            Add a Task
+          </button>
+        </div>
+      </div>
+
+      <div class="board">
+        <div class="column">
+          <div class="column-header">
+            <span class="status-indicator">
+              <span class="status-dot"></span>
+            </span>
+            <h3 class="column-title">Done</h3>
+            <span class="task-count">0</span>
+            <div id="board-actions">
+              <img
+                id="board-edit-button"
+                width="25"
+                height="25"
+                src="https://img.icons8.com/office/40/edit.png"
+                alt="edit" />
+              <div id="board-delete-button">
+                <img
+                  width="40"
+                  height="40"
+                  src="https://img.icons8.com/scribby/50/filled-trash.png"
+                  alt="filled-trash" />
+              </div>
+            </div>
+          </div>
+          <p class="column-description">
+            Congratulations on completing your task! What's next?
+          </p>
+          <div class="tasks"></div>
+          <button class="add-item-button">
+            <svg
+              class="add-item-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 4V20M4 12H20"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"></path>
+            </svg>
+            Add a task
+          </button>
+        </div>
+      </div>
+
+      <!-- add bord <button></button> -->
+      <div id="board-add-button">
+        <svg
+          class="add-item-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 4V20M4 12H20"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"></path>
+        </svg>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
